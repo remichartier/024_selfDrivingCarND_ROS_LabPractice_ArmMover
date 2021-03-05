@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/workspace/CarND-Capstone/catkin_ws/devel/setup.sh
