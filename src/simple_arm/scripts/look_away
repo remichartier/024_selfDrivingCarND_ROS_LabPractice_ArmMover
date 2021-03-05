@@ -7,22 +7,6 @@ from simple_arm.srv import *
 
 
 class LookAway(object):
-"""
-	def __init__(self):
-        rospy.init_node('look_away')
-
-        self.sub1 = rospy.Subscriber('/simple_arm/joint_states', 
-                                     JointState, self.joint_states_callback)
-        self.sub2 = rospy.Subscriber("rgb_camera/image_raw", 
-                                     Image, self.look_away_callback)
-        self.safe_move = rospy.ServiceProxy('/arm_mover/safe_move', 
-                                     GoToPosition)
-
-        self.last_position = None
-        self.arm_moving = False
-
-        rospy.spin()
-""" 
 
 # In some cases look_away is executing when running it manually but is not executing automatically with roslaunch. This is typically a timing issue. If look_away starts before the system has fully initialized, then look_away hangs in the call to safe_move. Student jsteinbae offered a great solution to this issue:
 
